@@ -145,11 +145,11 @@ export default {
         infoDiv.innerHTML = `${senderName} - ${moment().format('Do MMMM, YYYY h:mm a')}`;
 
         let colDiv = document.createElement('div');
-        colDiv.className = `col-10 card chat-card msg ${msgBg}`;
+        colDiv.className = `content-mess`;
         colDiv.innerHTML = xssFilters.inHTMLData(data.msg).autoLink({ target: "_blank", rel: "nofollow" });
 
         let rowDiv = document.createElement('div');
-        rowDiv.className = `row ${contentAlign} mb-2`;
+        rowDiv.className = `mess-tag`;
 
 
         colDiv.appendChild(infoDiv);
@@ -307,7 +307,7 @@ export default {
 
             //create a new div for card
             let cardDiv = document.createElement('div');
-            cardDiv.className = 'card card-sm';
+            cardDiv.className = 'card-video';
             cardDiv.id = `demo-${i}`;
             cardDiv.appendChild(newVid);
             cardDiv.appendChild(controlDiv);

@@ -1,4 +1,4 @@
-.chat-col{
+/* .chat-col{
     right: -100vw;
     bottom: 0;
     top: 40.5px;
@@ -10,16 +10,16 @@
     padding-bottom: 40px;
     padding-top: 15px;
     min-height: 100vh;
-}
+} */
 
-.chat-col.chat-opened {
+/* .chat-col.chat-opened {
     right: 0;
     overflow-y: auto;
     overflow-x: hidden;
-    transition: all 0.3s ease !important;
-    -webkit-transition: all 0.3s ease !important;
-    -moz-transition: all 0.3s ease !important;
-}
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease ;
+} */
 
 #chat-messages{
     height: 70vh;
@@ -35,7 +35,7 @@
     background: transparent;
 }
 
-.chat-box{
+/* .chat-box{
     bottom: 30px;
     right: 0;
     position: absolute;
@@ -43,24 +43,23 @@
     border-top: 1px groove white;
     border-left: 1px groove white;
     font-size: small;
-}
+} */
 
-.chat-box::placeholder{
+/* .chat-box::placeholder{
     font-size: small;
     font-weight: lighter;
     font-style: italic;
-}
+} */
 
-.chat-box,
-.chat-box:focus{
-    resize: none !important;
-    box-shadow: none !important;
-}
+/* .chat-box:focus{
+    resize: none;
+    box-shadow: none;
+} */
 
-.chat-row{
+/* .chat-row{
     height: 100%;
     overflow-x: scroll;
-}
+} */
 
 .main{
     padding-top: 40px;
@@ -139,7 +138,7 @@
 }
 
 .very-small{
-    font-size: 6px !important;
+    font-size: 6px;
 }
 
 
@@ -158,16 +157,92 @@
     cursor: pointer;
 }
 
-
+.record-video{
+    margin-bottom: .5rem;
+    flex: 0 0 50%;
+    max-width: 50%;
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
 .record-option{
     height: 200px;
     border-radius: 10%;
-    border: 1px solid #17a2b8;
+    border: 1px solid #E1BEE7;
     cursor: pointer;
     padding: 10px;
     vertical-align: middle;
 }
 
+.close{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    margin-top: 1rem;
+}
+
+.close-btn{
+    text-align: center;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.closeModal{
+    cursor: pointer;
+    color: #dc3545;
+    border-color: #dc3545;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    -webkit-appearance: button;
+    text-transform: none;
+    overflow: visible;
+    margin: 0;
+    font-family: inherit;
+}
+
+.btn-cmt{
+    cursor: pointer;
+    color: #fff;
+    padding: .25rem .5rem;
+    line-height: 1.5;
+    border-radius: .2rem;
+    display: inline-block;
+    font-weight: 400;
+    vertical-align: middle;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+
+    overflow: visible;
+    -webkit-appearance: button;
+    text-transform: none;
+    margin: 0;
+    font-family: inherit;
+}
+
+.record{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    text-align: center;
+}
 
 .custom-modal {
     display: none;
@@ -199,24 +274,23 @@ label{
     background-clip: padding-box;
     border: 1px solid #ced4da;
     border-radius: .25rem;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-ou
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
-/* .navbar{
-    background-color: #17a2b8;
+.navbar{
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
     z-index: 1030;
     border-radius: 0;
-    position: relative;
+    background-color: #E1BEE7;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-around;
-    padding: .5rem 1rem;
-} */
+    justify-content: space-between;
+    padding: .5rem 1rem;;
+}
 
 
 
@@ -229,13 +303,68 @@ label{
     background-color: #fefefe;
     margin: 15% auto;
     padding: 20px;
-    border: 1px solid #17a2b8;
+    border: 1px solid #E1BEE7;
     width: 80%;
 }
 
 .text-white{
     color: #fff;
 }
+
+.videos{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    margin-bottom: .5rem;
+    margin-top: .5rem;
+}
+
+.chat{
+    text-align: center;
+    margin-bottom: 1rem;
+    flex: 0 0;
+    max-width: 100%;
+    position: relative;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.main-section{
+    padding-top: 40px;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+    flex: 0 0 100%;
+    max-width: 100%;
+    width: 100%;
+}
+
+.chat-pane{
+    right: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    bottom: 0;
+    top: 40.5px;
+    z-index: 1000;
+    position: fixed;
+    color: #fff;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-bottom: 40px;
+    padding-top: 15px;
+    min-height: 100vh;
+    margin-bottom: .5rem;
+    background-color: #E1BEE7;
+    flex: 0 0 25%;
+    max-width: 25%;
+    width: 100%;
+}
+
 .btn-video{
     padding: 0.25rem 0.5rem;
     font-size: 0.875rem;
@@ -255,6 +384,186 @@ label{
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
+.err-msg-username{
+    color: #dc3545;
+    display: block;
+    margin-top: .25rem;
+    font-size: 80%;
+    font-weight: 400;
+}
+
+.err-msg{
+    text-align: center;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.chat-input{
+    bottom: 30px;
+    margin-bottom: 0px;
+    height: 15%;
+    resize: none;
+    box-shadow: none;
+    left: 0;
+    position: absolute;
+    border: 0;
+    border-top: 1px groove white;
+    border-left: 1px groove white;
+    font-size: small;
+    border-radius: 0;
+    border-color: #E1BEE7;
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: white;
+    background-clip: padding-box;
+    overflow: auto;
+    margin: 0;
+    font-family: inherit;
+}
+
+.username{
+    border-radius: 0;
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    overflow: visible;
+    font-family: inherit;
+}
+.room{
+    margin-bottom: 1rem;
+    margin-left: 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+    position: relative;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.create-room{
+    text-align: center;
+    margin-top: 3rem;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    font-size: 2rem;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;   
+}
+
+.create-room-btn{
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    width: 525px;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.start-room{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    margin-top: .5rem;
+}
+
+.mess-tag{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.card-video{
+    width: 50%;
+    max-width: 100%;
+    min-width: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+
+.enter-room-form{
+    margin-top: 3rem;
+    flex: 0 0 100%;
+    position: relative;
+    width: 500px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.content-mess{
+    width: 50%;
+    z-index: 1000;
+    border-radius: 6px;
+    font-weight: 400;
+    font-size: 12px;
+    color: black;
+    margin-left: 15px;
+    margin-bottom: 20px;
+    background-color: wheat;
+}
+
+.enter-room{
+    cursor: pointer;
+    border-radius: 0;
+    display: block;
+    width: 500px;
+    color: #fff;
+    background-color: #E1BEE7;
+    border-color: #E1BEE7;
+    font-weight: 400;
+    text-align: center;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    -webkit-appearance: button;
+    text-transform: none;
+    overflow: visible;
+    margin: 0;
+    font-family: inherit;
+}
+
+
 .video-icon{
     font-weight: 900;
     font-family: "Font Awesome 5 Free";
@@ -271,14 +580,34 @@ label{
     to {top: 0; opacity: 1}
 }
 
-.local-video{
+.your-name{
+    text-align: center;
+    margin-top: 3rem;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.container-fluid{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* .local-video{
     width: 40vw;
     transform: scaleX(-1);
     bottom: 0;
     left: 0;
     position: fixed;
     object-fit: contain;
-}
+} */
 
 @media only screen and (max-width:767px){
     .chat-col{
@@ -296,21 +625,12 @@ label{
     #chat-messages{
         height: 60vh;
     }
-
-    .chat-box{
-        bottom: 90px;
-        margin-bottom: 0px;
-    }
     
     .card-sm{
         max-width: 100%;
         min-width: 50%;
     }
 
-
-    .local-video{
-        width:40vw;
-    }
 }
 
 

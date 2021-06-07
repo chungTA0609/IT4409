@@ -3,7 +3,7 @@ import h from './helpers.js';
 window.addEventListener('load', () => {
     const room = h.getQString(location.href, 'room');
     const username = sessionStorage.getItem('username');
-
+    
     if (!room) {
         document.querySelector('#room-create').attributes.removeNamedItem('hidden');
     }
@@ -203,7 +203,7 @@ window.addEventListener('load', () => {
 
                     //create a new div for card
                     let cardDiv = document.createElement('div');
-                    cardDiv.className = 'card card-sm';
+                    cardDiv.className = 'card-video';
                     cardDiv.id = partnerName;
                     cardDiv.appendChild(newVid);
                     cardDiv.appendChild(controlDiv);
