@@ -48,7 +48,6 @@ window.addEventListener('load', () => {
         }
     });
 
-
     //When the 'Create room" is button is clicked
     document.getElementById('create-room').addEventListener('click', (e) => {
         e.preventDefault();
@@ -64,11 +63,11 @@ window.addEventListener('load', () => {
             sessionStorage.setItem('username', yourName);
 
             //create room link
-            let roomLink = `${location.origin}/?room=${roomName.trim().replace(' ', '_')}_${helpers.generateRandomString()}`;
+            let roomLink = `${location.origin}/?room=${roomName.trim().replace(' ', '')}${helpers.generateRandomString()}`;
 
             //show message with link to room
             document.querySelector('#room-created').innerHTML = `Room successfully created. Click <a href='${roomLink}'>here</a> to enter room. 
-                Share the room link with your partners.`;
+            <a href='${roomLink}'>Share</a> the room link with your partners.`;
 
             //empty the values
             document.querySelector('#room-name').value = '';

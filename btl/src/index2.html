@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Multi-User Video Call</title>
+
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <script src='/socket.io/socket.io.js'></script>
+        <script type="module" src='assets/js/event2.js'></script>
+        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link rel='stylesheet' href='assets/css/app.css' type="text/css">
+        <script src='assets/js/autolink.js'></script>
+        <script>
+            function join() {
+                let roomName = document.querySelector('#join-name').value;
+                let link ="http://localhost:3000/?room=" + roomName;
+                document.location.href = link;
+                console.console.log(roomName);
+            }
+        </script>
+    </head>
+
+    <body>
+        <nav class="navbar">
+            <div class="text-white"><i class="home-page">Meeting Online</i></div>
+        </nav>
+        <div class="container-fluid" id='room-create' style="display: none;">
+            <div class="row">
+                <div class="create-room">Create Room</div>
+            </div>
+            
+            <div class="start-room">
+                <div class="err-msg">
+                    <span class="err-msg-username" id='err-msg'></span>
+                </div>
+
+                <div class="form-input">
+                    <label for="room-name">Room Name</label>
+                    <input type="text" id='room-name' class="input-name" placeholder="Room Name">
+                </div>
+
+                <div class="form-input">
+                    <label for="your-name">Your Name</label>
+                    <input type="text" id='your-name' class="input-name" placeholder="Your Name">
+                </div>
+
+                <div class="form-input">
+                    <label for="room-name"></label>
+                    <button id='create-room' class="create-room-btn" style="background: #E1BEE7;">Create Room</button>
+                    <label for="room-name"></label>
+                    <button id='join-room' class="create-room-btn" style="background: #E1BEE7;"><a href="./login">Join Room</a></button>
+                </div>
+
+                <div class="room" id='room-created'></div>
+            </div>
+        </div>
+        <div>
+            <div class="row">
+                <div class="create-title">Join Room</div>
+            </div>
+            <div class="form-input" style="display: none;">
+                <label for="room-name"></label>
+                <button id='enter-room' class="create-room-btn" style="background: #E1BEE7;">Enter Room</button>
+            </div>
+            <div class="start-room">
+                <div class="form-input">
+                    <label for="room-name">Room ID</label>
+                    <input type="text" id='join-name' class="input-name" placeholder="Room ID">
+                </div>
+
+                <div class="form-input">
+                    <label for="room-name"></label>
+                    <button id="join-room" class="create-room-btn" style="background: #E1BEE7;" onclick="join();">Join room</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

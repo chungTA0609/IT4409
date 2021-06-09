@@ -14,6 +14,11 @@ app.get('/', (req, res) => {
     console.log(__dirname.toString());
 });
 
+app.get('/login', (req, res) => {
+    res.sendFile(__dirname + '/index2.html');
+    console.log(__dirname.toString());
+});
+
 io.of('/stream').on('connection', stream);
 
 server.listen(3000);
